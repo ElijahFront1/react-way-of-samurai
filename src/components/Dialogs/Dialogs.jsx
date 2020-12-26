@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 import DialogsItem from './DialogItem/DialogsItem';
 import s from './Dialogs.module.css';
 import Message from './Message/Message';
-import {messages, dialogs} from '../../index';
-
+import {dialogs, messages} from './../../index';
 
 const Dialogs = (props) => {
 
