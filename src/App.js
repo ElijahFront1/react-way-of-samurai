@@ -8,16 +8,15 @@ import News from './components/News/News.jsx';
 import Music from './components/Music/Music.jsx';
 import Settings from './components/Settings/Settings.jsx';
 
-
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navbar />
+        <Navbar state={props.state.sidebar}/>
         <div className="app-wrapper-content">
-          <Route path="/Profile" render={ () => <Profile />} />
-          <Route exact path="/Dialogs" render={ () => <Dialogs />} />
+          <Route path="/Profile" render={() => <Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText}/>} />
+          <Route exact path="/Dialogs" render={() => <Dialogs state={props.state.dialogsPage} />} />
           <Route path="/News" component={News} />
           <Route path="/Music" component={Music} />
           <Route path="/Settings" component={Settings} />
