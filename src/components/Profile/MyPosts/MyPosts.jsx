@@ -9,12 +9,12 @@ const MyPosts = (props) => {
         props.addPost();
     }
 
-    let postsElement = props.posts.map(p => <Post message={p.message} like={p.likesCount} />);
-
     let onPostChange = () => {
         let text = newPost.current.value;
         props.updateNewPostText(text);
     }
+    
+    let postsElement = props.posts.map(p => <Post message={p.message} like={p.likesCount} />);
 
     return (
         <div className={s.postsBlock}>
