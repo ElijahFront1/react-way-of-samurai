@@ -15,10 +15,10 @@ function App(props) {
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Navbar state={props.state.sidebar}/>
+        <Navbar />
         <div className="app-wrapper-content">
-          <Route path="/Profile" render={() => <Profile store={props.store}/>} />
-          <Route exact path="/Dialogs" render={() => <DialogsContainer store={props.store}/>} />
+          <Route path="/Profile" render={() => <Profile />} />
+          <Route exact path="/Dialogs" render={() => <DialogsContainer />} />
           <Route path="/News" component={News} />
           <Route path="/Music" component={Music} />
           <Route path="/Settings" component={Settings} />
